@@ -1,0 +1,11 @@
+Novosibirsk         	 4455	  958	 4783
+Berdsk              	 8670	 9166	  115
+Tatarsk             	 7598	 1699	 7270
+Ust`-tatarsk        	  609	  978	 5474
+Barabinsk           	 4331	 2637	 2767
+Toguchin            	 7937	 8365	 3434
+Ubinka              	 6537	 8019	 5622
+Cherepanovo         	  900	 9554	 2487
+Kyishtovka          	 8268	 8783	 1104
+=============================================
+Avg:                	 5478	 5573	 3672
