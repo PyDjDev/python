@@ -1,0 +1,20 @@
+<html>
+	<head charset="utf-8">
+		<title>
+		{% block pagetitle %}
+		{{pagetitle}}
+		{% endblock %}
+		</title>
+	</head>
+	<body>
+		{% block content%}
+		<ul>
+			{%for el in blog_posts %}
+				<li><a href="{% url 'post' el.id %}">{{el.title}} {{el.pud_date | date:"d.m.y H:i"}}</a></li>
+			{%empty%}
+				<p>Blog posts is empty</p>
+			{%endfor%}
+		</ul>
+		{%endblock%}
+	</body>
+</html>

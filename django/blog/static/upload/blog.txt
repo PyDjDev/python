@@ -1,0 +1,10 @@
+Record One
+2015-07-01 20:00
+This is first record.
+
+Lorem ipsum dolor sir amet
+Немного на русском.
+.
+Record Two
+2015-07-01 20:05
+Second record goes here.

@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block pagetitle %} Голосование {% endblock %}
+{% block content %}
+	<h1>Голосование</h1>
+	<h2>Your IP:  {{ip}}</h2>
+	<ul>
+	{% for v in votes %}
+	<li>
+		{% if v.is_loked %}
+		{{v.title}} (Голосов: {{v.total_votes}}) You have voted
+		{% else %}
+		<a href="{% url 'vote' v.id%}">
+			{{v.title}} (Голосов: {{v.total_votes}})
+		</a>
+		{% endif %}
+	</li>
+	{% empty %}
+	<p>Empty</p>
+	{% endfor %}
+	</ul>
+{% endblock %}

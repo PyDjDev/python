@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block title %}Форма{%endblock%}
+{% block content %}
+	<div>
+		<h1>Sending messages</h1>
+		<form action="" method="POST" enctype="multipart/form-data">
+			{% csrf_token %} <!-- must be ... its sucurity mehanism -->
+			<table>
+			{{form.as_table}}
+			</table>
+			<p><input  type="submit" value="Sent messages"/></p>
+		</form>
+		<div>
+			<h2>POST.request</h2>
+			<pre>{{postreport}}</pre>
+		</div>
+		<div>
+			<h2>FILE.request</h2>
+			<pre>{{uploadfile}}</pre>
+		</div>
+		<div>
+			{% for m in message %}
+			<p>
+				<strong>From: {{m.author}}</strong></br>
+				<pre>Message: {{m.message}}</pre>
+				<strong>
+				Public: {% if m.is_public %} Yes {% else %} No {% endif %}</strong>
+			</p>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
